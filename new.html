@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Apkmodderkings</title>
+
+<style>
+:root{
+  --pri:#ff2a2a;
+  --txt:#111;
+  --bg:#f5f5f5;
+  --card:#ffffff;
+  font-family:Inter,system-ui;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);padding:12px;display:flex;justify-content:center;}
+
+.container{width:100%;max-width:850px;display:flex;flex-direction:column;gap:14px}
+
+/* MAIN CARD SMALLER + PREMIUM MINIMAL */
+.mainCard{
+  background:var(--card);
+  border-radius:14px;
+  padding:10px;
+  border:1px solid #e5e5e5;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* HEADER SMALL + MINIMAL */
+.header{
+  display:flex;align-items:center;gap:12px;
+}
+.logo{
+  width:42px;height:42px;border-radius:10px;overflow:hidden;flex-shrink:0;
+}
+.logo img{width:100%;height:100%;object-fit:cover;}
+.brand-title{font-size:16px;font-weight:800;color:var(--txt);}
+
+/* IFRAME SMALLER MARGIN */
+.iframeBox{
+  width:100%;border-radius:12px;overflow:hidden;
+  border:1px solid #ddd;background:#fff;
+  aspect-ratio:9/16;
+}
+.iframeBox iframe{width:100%;height:100%;border:0}
+
+/* BOTTOM PANEL — MORE MINIMAL + SMALL SIZE */
+.bottomPanel{
+  background:#fff;
+  border-radius:12px;
+  border:1px solid #e4e4e4;
+  padding:10px;
+  display:flex;flex-direction:column;gap:10px;
+}
+
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+
+#period{
+  background:#fff2f2;color:#ff1e1e;
+  padding:4px 8px;border-radius:8px;font-size:12px;font-weight:800;
+}
+#timer{
+  background:#eee;padding:4px 8px;border-radius:8px;font-size:12px;font-weight:700;color:#444;
+}
+
+/* Prediction tiny */
+.pred{
+  background:#fff8f8;
+  border:1px solid #ffd2d2;
+  padding:6px 10px;
+  border-radius:10px;
+  display:flex;align-items:center;gap:8px;
+  font-weight:800;font-size:13px;color:#d40000;
+}
+.liveDot{width:7px;height:7px;border-radius:50%;background:#ff5a5a;}
+
+.confWrap{display:flex;align-items:center;gap:6px;}
+.confBar{width:100px;height:7px;border-radius:999px;background:#e6e6e6;overflow:hidden;}
+#confBar{height:7px;width:0%;background:#ff2a2a;}
+#confVal{font-size:12px;font-weight:900;color:#222;}
+
+/* PREMIUM BUY - TINY MINIMAL */
+#buyLevel{
+  padding:7px 12px;
+  background:#fff4f4;
+  border:1px solid #ff3a3a;
+  color:#ff2a2a;
+  border-radius:10px;
+  font-weight:900;
+  cursor:pointer;
+  font-size:12px;
+  display:flex;align-items:center;gap:5px;
+}
+#buyLevel:hover{background:#ffeaea}
+
+/* SIDE */
+.sideCard{
+  background:#fff;border-radius:14px;
+  padding:10px;
+  border:1px solid #e5e5e5;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+  text-align:center;font-weight:900;font-size:14px;
+}
+@media(min-width:900px){
+  .container{flex-direction:row}
+  .mainCard{flex:2}
+  .sideCard{flex:1}
+}
+
+/* SHARE MODAL */
+.overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.55);
+  display:flex;justify-content:center;align-items:center;z-index:9999;
+}
+.overlayCard{
+  background:#fff;padding:16px;border-radius:14px;
+  width:90%;max-width:330px;text-align:center;
+}
+.shareBtns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.btnShare{
+  padding:8px 12px;border-radius:10px;border:1px solid #ddd;
+  background:#fff;font-weight:700;font-size:13px;
+}
+.progressDots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+.dot{width:12px;height:12px;border-radius:50%;background:#dcdcdc}
+.dot.on{background:#ff2a2a}
+
+/* FLOATING BUTTON SMALLER ULTRA-MINIMAL */
+.fabTele{
+  position:fixed;
+  bottom:16px;
+  right:16px;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  padding:6px 9px;
+  background:#ff2a2a;
+  border-radius:999px;
+  border:1px solid #c70000;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
+  color:white;
+  font-size:10px;
+  font-weight:900;
+  cursor:grab;
+  user-select:none;
+  touch-action:none;
+}
+.fabTele svg{width:12px;height:12px;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="mainCard">
+  <div class="header">
+    <div class="logo"><img src="https://i.ibb.co/Zz3nkzFj/x.jpg"></div>
+    <div class="brand-title">Apkmodderkings</div>
+  </div>
+
+  <div class="iframeBox">
+    <iframe src="https://82bet22.com/#/register?invitationCode=14244992621"></iframe>
+  </div>
+
+  <div class="bottomPanel">
+
+    <div class="row">
+      <div id="period">Period: —</div>
+      <div id="timer">Cooldown 00:00</div>
+    </div>
+
+    <div class="row">
+      <div class="pred">
+        <div class="liveDot"></div>
+        <div id="predText">Analyzing…</div>
+      </div>
+    </div>
+
+    <div class="row" style="justify-content:space-between;">
+      <div class="confWrap">
+        <div class="confBar"><div id="confBar"></div></div>
+        <div id="confVal">--%</div>
+      </div>
+
+      <button id="buyLevel">🛒 Buy Premium</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="sideCard">Live</section>
+
+</div>
+
+<div id="shareOverlay" class="overlay" style="display:none">
+  <div class="overlayCard">
+    <h3 style="font-size:16px;font-weight:800;margin-bottom:6px">Share to Unlock</h3>
+
+    <div class="shareBtns">
+      <button id="nativeShare" class="btnShare">Share</button>
+      <button id="copyShare" class="btnShare">Copy</button>
+      <button id="openApps" class="btnShare">Open Apps</button>
+    </div>
+
+    <div class="progressDots">
+      <div class="dot" id="dot1"></div>
+      <div class="dot" id="dot2"></div>
+    </div>
+
+    <div id="shareCountText" style="margin-top:10px;color:#555">0 / 2</div>
+
+    <button id="continueBtn" class="btnShare" style="margin-top:12px;display:none">Continue</button>
+  </div>
+</div>
+
+<a id="telegramFab" class="fabTele" href="https://telegram.me/apkmodderkings" target="_blank">
+  <svg viewBox="0 0 24 24">
+    <path fill="white" d="M12 0C5.372 0 0 5.372 0 12c0 
+      6.627 12 12 12 12s12-5.373 12-12C24 5.372 18.628 0 
+      12 0zm5.285 8.09L10.39 11.97c-.264.112-.264.112-.264.253l-.995 
+      4.082c-.17.702-.62.86-1.118.541-.498-.32-2.04-1.245-3.02-1.843-.395-.244-.398-.49.077-.717 
+      0 0 9.266-4.03 
+      9.827-4.268.56-.238.42.362.42.362z"/>
+  </svg>
+  JOIN
+</a>
+
+<span id="shareMessage" style="display:none">Join for free APKs 🎁
+👇 Click to join Telegram
+https://telegram.me/apkmodderkings</span>
+
+<script>
+document.getElementById("buyLevel").onclick=()=>window.open("https://telegram.me/absentexe","_blank");
+
+let lastPeriod=null;
+function updatePeriod(){
+ const now=new Date();
+ const secLeft=60-now.getUTCSeconds();
+ const minTotal=now.getUTCHours()*60+now.getUTCMinutes();
+ const per =
+ `${now.getUTCFullYear()}${(now.getUTCMonth()+1+"").padStart(2,"0")}${(now.getUTCDate()+"").padStart(2,"0")}-${10000+minTotal}`;
+ document.getElementById("period").innerText="Period: "+per;
+ document.getElementById("timer").innerText="Cooldown 00:"+String(secLeft).padStart(2,"0");
+ if(lastPeriod!==per){lastPeriod=per;startAnalysis();}
+}
+function startAnalysis(){
+ let p=document.getElementById("predText");
+ let c=document.getElementById("confVal");
+ let b=document.getElementById("confBar");
+ p.textContent="Analyzing…";c.textContent="--%";b.style.width="0%";
+ setTimeout(()=>{
+   let pred=Math.random()<0.8?"Big":"Small";
+   let conf=Math.floor(Math.random()*21)+75;
+   p.textContent=pred;c.textContent=conf+"%";b.style.width=conf+"%";
+ },2000);
+}
+setInterval(updatePeriod,1000);updatePeriod();
+
+(function(){
+const MSG=document.getElementById("shareMessage").textContent;
+const LINK="https://telegram.me/apkmodderkings";
+const REQ=2,KEY="share_mini_v3",TKEY="unlock_mini_v3",DAY=86400000;
+const ov=document.getElementById("shareOverlay");
+const n=document.getElementById("nativeShare"),c=document.getElementById("copyShare"),a=document.getElementById("openApps");
+const d1=document.getElementById("dot1"),d2=document.getElementById("dot2");
+const tx=document.getElementById("shareCountText"),cn=document.getElementById("continueBtn");
+const buy=document.getElementById("buyLevel");
+
+function gc(){return parseInt(localStorage.getItem(KEY)||"0")}
+function sc(v){localStorage.setItem(KEY,v);upd()}
+function inc(){let x=gc();x=Math.min(REQ,x+1);sc(x);if(x>=REQ)unlock()}
+function unlock(){localStorage.setItem(TKEY,Date.now());ov.style.display="none";buy.onclick=()=>window.open(LINK,"_blank")}
+function ok(){let t=localStorage.getItem(TKEY);return t && (Date.now()-t<DAY)}
+function upd(){let x=gc();tx.textContent=x+" / "+REQ;d1.classList.toggle("on",x>=1);d2.classList.toggle("on",x>=2);cn.style.display=x>=REQ?"block":"none"}
+
+window.onload=()=>{ok()?ov.style.display="none":(upd(),ov.style.display="flex"),ok()&&(buy.onclick=()=>window.open(LINK,"_blank"))}
+
+n.onclick=async()=>{
+ if(navigator.share){try{await navigator.share({text:MSG});inc();return;}catch(e){}}
+ const okc=await cp(MSG);if(okc){alert("Copied.");inc();}
+}
+c.onclick=async()=>{const okc=await cp(MSG);if(okc){alert("Copied.");inc();}}
+a.onclick=()=>{window.open(LINK,"_blank");inc()}
+cn.onclick=()=>unlock()
+
+async function cp(t){
+ try{await navigator.clipboard.writeText(t);return true;}
+ catch(e){
+   let ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();
+   try{document.execCommand("copy");ta.remove();return true;}catch(e){ta.remove();return false;}
+ }
+}
+
+/* draggable */
+const fab=document.getElementById("telegramFab");
+let id=null,sx=0,sy=0,ox=0,oy=0,m=false;
+fab.addEventListener("pointerdown",e=>{
+ id=e.pointerId;fab.setPointerCapture(id);
+ let r=fab.getBoundingClientRect();ox=r.left;oy=r.top;sx=e.clientX;sy=e.clientY;m=true;
+});
+window.addEventListener("pointermove",e=>{
+ if(e.pointerId!==id||!m)return;
+ fab.style.left=(ox+(e.clientX-sx))+"px";
+ fab.style.top =(oy+(e.clientY-sy))+"px";
+ fab.style.right="auto";fab.style.bottom="auto";
+});
+window.addEventListener("pointerup",e=>{if(e.pointerId===id){try{fab.releasePointerCapture(id);}catch{}m=false;}})
+})();
+</script>
+
+</body>
+</html>
+
